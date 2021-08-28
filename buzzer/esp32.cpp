@@ -13,7 +13,7 @@ void loop() {
     char blu = SerialBT.read();
     if(blu == '1'){
       digitalWrite(15,HIGH);
-      delay(1000);
+    }else if(blu == '0'){
       digitalWrite(15,LOW);
     }
   }
