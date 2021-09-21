@@ -22,13 +22,12 @@ void loop() {
   if (SerialBT.available()){
     int buzzer = digitalRead(BZ_PIN);
     char blu = SerialBT.read();
-    while(blu == '1'){
+    if(blu == '1'){
        digitalWrite(BZ_PIN,HIGH);
        LED();
-      int buzzer = digitalRead(BZ_PIN);
-      char blu = SerialBT.read();
+    }else{
+      digitalWrite(BZ_PIN,LOW);
+      digitalWrite(LED_PIN,LOW);
     }
-    digitalWrite(BZ_PIN,LOW);
-    digitalWrite(LED_PIN,LOW);
   }
 }
