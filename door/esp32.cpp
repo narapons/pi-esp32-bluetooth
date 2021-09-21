@@ -8,6 +8,7 @@ BluetoothSerial SerialBT;
 void setup() {
   SerialBT.begin("Door");
   pinMode(DOOR_PIN,INPUT);
+  pinMode(LED_PIN.OUTPUT);
 }
 
 void loop() {
