@@ -5,13 +5,6 @@ BluetoothSerial SerialBT;
 #define BZ_PIN 15
 #define LED_PIN 23
 
-void LED(){
-  digitalWrite(LED_PIN,HIGH);
-  delay(500);
-  digitalWrite(LED_PIN,LOW);
-  delay(500);
-}
-
 void setup() {
   SerialBT.begin("Buzzer");
   pinMode(BZ_PIN,OUTPUT);
@@ -24,7 +17,7 @@ void loop() {
     char blu = SerialBT.read();
     if(blu == '1'){
        digitalWrite(BZ_PIN,HIGH);
-       LED();
+       digitalWrite(LED_PIN,HIGH);
     }else{
       digitalWrite(BZ_PIN,LOW);
       digitalWrite(LED_PIN,LOW);
