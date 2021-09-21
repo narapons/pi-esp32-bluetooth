@@ -14,7 +14,7 @@ void setup() {
 void loop() {
   int door = digitalRead(DOOR_PIN);
   SerialBT.print(door);
-  if(door == 0) digitalWrite(LED_PIN,HIGH);
+  while(door == 0) digitalWrite(LED_PIN,HIGH);
   digitalWrite(LED_PIN,LOW);
   delay(1000);
 }
