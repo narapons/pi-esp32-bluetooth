@@ -12,11 +12,6 @@ void LED(){
   delay(500);
 }
 
-void getBuzzer(){
-  int buzzer = digitalRead(BZ_PIN);
-  char blu = SerialBT.read();
-}
-
 void setup() {
   SerialBT.begin("Buzzer");
   pinMode(BZ_PIN,OUTPUT);
@@ -25,11 +20,13 @@ void setup() {
 
 void loop() {
   if (SerialBT.available()){
-    getBuzzer();
+    int buzzer = digitalRead(BZ_PIN);
+    char blu = SerialBT.read();
     while(blu == '1'){
        digitalWrite(BZ_PIN,HIGH);
        LED();
-       getBuzzer();
+      int buzzer = digitalRead(BZ_PIN);
+      char blu = SerialBT.read();
     }
     digitalWrite(BZ_PIN,LOW);
     digitalWrite(LED_PIN,LOW);
