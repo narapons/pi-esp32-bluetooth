@@ -16,8 +16,8 @@ try:
         print(sensor)
         data = cl.OrderedDict()
         data["DATA"] = [sensor, door, buzzer]
-        json = open('myu_s.json', 'w')
-        json.dump(data, json, indent=4)
+        with open('data.json', mode='wt', encoding='utf-8') as file:
+            json.dump(data, file, ensure_ascii=False, indent=2)
 
         if serial_sensor.readline(1) == b'1' or serial_door.readline(1) == b'0':
             print(serial_buzzer.write(b'1'))
