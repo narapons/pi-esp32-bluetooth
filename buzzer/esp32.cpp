@@ -15,6 +15,7 @@ void loop() {
   if (SerialBT.available()){
     int buzzer = digitalRead(BZ_PIN);
     char blu = SerialBT.read();
+    SerialBT.print(buzzer);
     if(blu == '1'){
        digitalWrite(BZ_PIN,HIGH);
        digitalWrite(LED_PIN,HIGH);
