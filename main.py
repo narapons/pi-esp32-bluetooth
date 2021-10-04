@@ -22,6 +22,7 @@ try:
             print(serial_buzzer.write(b'1'))
             buzzer = 1
             time.sleep(3)
+        else:
             print(serial_buzzer.write(b'0'))
             buzzer = 0
 except KeyboardInterrupt:
