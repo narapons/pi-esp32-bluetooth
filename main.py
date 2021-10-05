@@ -18,7 +18,7 @@ try:
         with open('data.json', mode='wt') as file:
             json.dump(data, file)
         print("checking...")
-        if serial_sensor.readline(1) == b'1' or serial_door.readline(1) == b'0':
+        if sensor == b'1' or door == b'0':
             print(serial_buzzer.write(b'1'))
             buzzer = 1
             time.sleep(3)
