@@ -14,7 +14,7 @@ try:
         sensor = serial_sensor.readline(1)
         door = serial_door.readline(1)
         data = cl.OrderedDict()
-        data["DATA"] = {"sensor":sensor, "door":door, "buzzer":buzzer}
+        data["DATA"] = [{"sensor":sensor, "door":door, "buzzer":buzzer}]
         with open('data.json', mode='wt') as file:
             json.dump(data, file)
         print("checking...")
