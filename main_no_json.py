@@ -7,7 +7,6 @@ import collections as cl
 serial_sensor = serial.Serial('/dev/rfcomm0')
 serial_buzzer = serial.Serial('/dev/rfcomm1')
 serial_door = serial.Serial('/dev/rfcomm2')
-buzzer = "0"
 
 try:
     while True:
