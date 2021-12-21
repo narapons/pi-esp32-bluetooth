@@ -13,8 +13,8 @@ void setup() {
 
 void loop() {
   int door = digitalRead(DOOR_PIN);
-  SerialBT.print(door);
   if(door == 0){
+    SerialBT.print(door);
     digitalWrite(LED_PIN,HIGH);
   }else{
     digitalWrite(LED_PIN,LOW);
