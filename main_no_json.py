@@ -16,6 +16,5 @@ try:
         print("checking...")
         if sensor == b'1' or door == b'0':
             print(serial_buzzer.write(b'1'))
-        delay(1000);
 except KeyboardInterrupt:
     sys.exit(0)
