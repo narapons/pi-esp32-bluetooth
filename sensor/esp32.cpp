@@ -9,8 +9,5 @@ void setup() {
 
 void loop() {
   int sensor = digitalRead(15);
-  if(sensor == 1){
-    SerialBT.print(sensor);
-  }
-  delay(1000);
+  SerialBT.print(sensor);
 }
