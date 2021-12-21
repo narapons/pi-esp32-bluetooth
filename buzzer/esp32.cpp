@@ -17,9 +17,6 @@ void loop() {
     if(blu == '1'){
        digitalWrite(BZ_PIN,HIGH);
        digitalWrite(LED_PIN,HIGH);
-    }else{
-      digitalWrite(BZ_PIN,LOW);
-      digitalWrite(LED_PIN,LOW);
     }
   }
 }
